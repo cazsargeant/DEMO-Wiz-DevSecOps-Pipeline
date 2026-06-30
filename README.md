@@ -1,4 +1,4 @@
-# Wiz DevSecOps Pipeline Demo
+# Wiz Terraform and DevSecOps Demo
 
 A demo showing how Wiz Code can support a DevSecOps workflow across source control and CI/CD pipelines.
 
