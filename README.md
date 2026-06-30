@@ -8,6 +8,7 @@ This repository is intentionally generic and contains no organisation-specific e
 
 - A reusable GitHub Actions workflow for running a Wiz IaC scan.
 - How an IaC repository can call a shared security workflow using `workflow_call`.
+- How Terraform can connect to Wiz using the Wiz Terraform Provider and query existing cloud, registry, and Kubernetes assets.
 - How security signals can be surfaced during pull request and pipeline review.
 
 ## How The Workflow Works
@@ -26,6 +27,17 @@ jobs:
     with:
       repo_url: ${{ github.repository }}
 ```
+
+## Terraform Provider Example
+
+The `terraform/wiz-provider-discovery` example shows how to configure the Wiz Terraform Provider and query:
+
+- cloud accounts
+- container registries
+- Kubernetes clusters
+- Kubernetes namespaces
+
+It uses `WIZ_CLIENT_ID` and `WIZ_CLIENT_SECRET` environment variables, so no credentials are stored in the repository.
 
 ## Public Demo Notes
 
